@@ -296,6 +296,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
+  color: #000;
 }
 .header__top {
   height: 63px;
@@ -585,7 +587,7 @@ h1, h2 {
   font-weight: 300;
   letter-spacing: 0.5px;
 }
-.restau__like {
+.restau .like {
   position: absolute;
   z-index: 3;
   top: 0;
@@ -594,7 +596,7 @@ h1, h2 {
   height: 100%;
   padding: 19px 5px;
 }
-.restau__like__ico--liked {
+.restau .like__ico--liked {
   top: 19px;
   left: 5px;
 }
