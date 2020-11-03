@@ -350,7 +350,6 @@ body {
 h1, h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 13px;
 }
 
 .intro {
@@ -368,8 +367,6 @@ h1, h2 {
   text-align: center;
 }
 .intro__title {
-  font-size: 1.5rem;
-  font-weight: bold;
   margin-bottom: 13px;
 }
 .intro__title span {
@@ -398,7 +395,7 @@ h1, h2 {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 26px;
-  background: linear-gradient(176deg, #FF79DA 10%, #9356DC 94%);
+  background: linear-gradient(176deg, #FF79DA, #9356DC 94%);
   -webkit-box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
@@ -455,6 +452,85 @@ h1, h2 {
 .steps__ico {
   margin-right: 18px;
   color: #7e7e7e;
+}
+
+.restaurants {
+  padding: 51px 20px;
+}
+.restaurants__title {
+  margin-bottom: 22px;
+}
+
+.restau {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 18px;
+}
+.restau__header {
+  height: 175px;
+  overflow: hidden;
+  position: relative;
+}
+.restau__header img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -57%);
+          transform: translate(-50%, -57%);
+}
+.restau__header .tag {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  background-color: #99E2D0;
+  color: #278870;
+  height: 28px;
+  width: 78px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+}
+.restau__bottom {
+  padding: 16px 13px;
+  position: relative;
+}
+.restau__title {
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin: 0 0 4px;
+}
+.restau__title::first-letter {
+  text-transform: uppercase;
+}
+.restau__city {
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+.restau__like {
+  position: absolute;
+  cursor: pointer;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  width: 55px;
+  height: 100%;
+  padding: 19px 5px;
+}
+.restau__ico {
+  font-size: 1.6875rem;
+}
+.restau__ico--liked {
+  background: linear-gradient(176deg, #FF79DA, #9356DC 94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .footer {
