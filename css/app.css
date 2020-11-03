@@ -100,6 +100,7 @@ video {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -260,6 +261,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -462,10 +464,14 @@ h1, h2 {
 }
 
 .restau {
+  display: block;
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
   margin-bottom: 17px;
+  color: #000;
+  -webkit-box-shadow: 0 3px 8px 1px #ddd;
+          box-shadow: 0 3px 8px 1px #ddd;
 }
 .restau__header {
   height: 175px;
@@ -478,6 +484,9 @@ h1, h2 {
   left: 50%;
   -webkit-transform: translate(-50%, -57%);
           transform: translate(-50%, -57%);
+  max-width: 101%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .restau__header .tag {
   position: absolute;
@@ -524,13 +533,32 @@ h1, h2 {
   height: 100%;
   padding: 19px 5px;
 }
+.restau__like input[type=checkbox] {
+  display: none;
+}
+.restau__like input[type=checkbox]:checked ~ .restau__ico {
+  opacity: 0;
+}
+.restau__like input[type=checkbox]:checked ~ .restau__ico--liked {
+  opacity: 1;
+}
 .restau__ico {
   font-size: 1.6875rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .restau__ico--liked {
   background: linear-gradient(176deg, #FF79DA, #9356DC 94%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 19px;
+  left: 5px;
+  opacity: 0;
+}
+.restau:hover .restau__header img {
+  -webkit-transform: translate(-50%, -57%) scale(1.1);
+          transform: translate(-50%, -57%) scale(1.1);
 }
 
 .footer {
@@ -569,6 +597,11 @@ h1, h2 {
       -ms-flex-align: center;
           align-items: center;
   letter-spacing: 0.5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.footer a:hover {
+  color: #99E2D0;
 }
 .footer .material-icons {
   font-size: 0.875rem;
