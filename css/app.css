@@ -455,7 +455,7 @@ h1, h2 {
 }
 
 .restaurants {
-  padding: 51px 20px;
+  padding: 51px 20px 47px;
 }
 .restaurants__title {
   margin-bottom: 22px;
@@ -465,7 +465,7 @@ h1, h2 {
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
-  margin-bottom: 18px;
+  margin-bottom: 17px;
 }
 .restau__header {
   height: 175px;
@@ -540,4 +540,37 @@ h1, h2 {
   height: 197px;
   background-color: #353535;
   color: #fff;
+  padding: 27px 24px;
+}
+.footer .logo {
+  width: 100px;
+}
+.footer .logo img {
+  max-width: 100%;
+  -webkit-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(108deg) brightness(104%) contrast(104%);
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(108deg) brightness(104%) contrast(104%);
+}
+.footer li {
+  margin-bottom: 8px;
+}
+.footer li:first-child {
+  margin-bottom: 22px;
+}
+.footer li:last-child {
+  margin-bottom: 0;
+}
+.footer a {
+  color: #fff;
+  font-size: 0.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.5px;
+}
+.footer .material-icons {
+  font-size: 0.875rem;
+  margin-right: 9px;
 }
