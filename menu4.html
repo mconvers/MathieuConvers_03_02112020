@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <title>ohmyfood - Le délice des sens</title>
+  <link rel="icon" href="favicon.ico"><link href="css/app.css" rel="stylesheet"></head>
+  <body>
+    <div class="app">
+      <div class="gab"></div>
+      <header class="header">
+        <div class="wrapper">
+          <a href="./index.html" class="link-return">
+            <i class="material-icons">arrow_back</i>
+          </a>
+          <div class="header__top">
+            <div class="logo">
+              <img src="images/content/ohmyfood.png" alt="ohmyfood">
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <header class="main__header main__header--menu">
+          <div class="main__header__img">
+            <img src="images/content/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="à la française">
+          </div>
+        </header>
+        <section class="menu">
+          <header class="menu__header">
+            <h1 class="menu__title">Le délice des sens</h1>
+            <label class="like" for="checkbox1">
+              <input type="checkbox" id="checkbox1" name="checkbox1">
+              <i class="like__ico like__ico--liked material-icons">favorite</i>
+              <i class="like__ico material-icons">favorite_border</i>
+            </label>
+          </header>
+          <div class="menu__step">
+            <p class="menu__step__title">Entrées</p>
+            <div class="choices">
+              <label class="choices__item" for="starter1">
+                <input type="radio" id="starter1" name="starter">
+                <div class="choices__content">
+                  <p class="choices__title">
+                    Tartare de thon
+                    <span>Assaisonné au yuzu</span>
+                  </p>
+                  <div class="choices__price">25€</div>
+                  <div class="choices__check">
+                    <i class="material-icons">check</i>
+                  </div>
+                </div>
+              </label>
+              <label class="choices__item" for="starter2">
+                <input type="radio" id="starter2" name="starter">
+                <div class="choices__content">
+                  <p class="choices__title">
+                    Bouchée de homard croustillant
+                    <span>Et sa farandole de petits légumes</span>
+                  </p>
+                  <div class="choices__price">35€</div>
+                  <div class="choices__check">
+                    <i class="material-icons">check</i>
+                  </div>
+                </div>
+              </label>
+              <label class="choices__item" for="starter3">
+                <input type="radio" id="starter3" name="starter">
+                <div class="choices__content">
+                  <p class="choices__title">
+                    Velouté de cèpes
+                    <span>Aux truffes</span>
+                  </p>
+                  <div class="choices__price">20€</div>
+                  <div class="choices__check">
+                    <i class="material-icons">check</i>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="menu__step">
+            <p class="menu__step__title">Plats</p>
+            <div class="choices">
+              <label class="choices__item" for="dish1">
+                <input type="radio" id="dish1" name="dish">
+                <div class="choices__content">
+                  <p class="choices__title">
+                    Poulet rôti aux herbes de Provence
+                    <span>Et sa crème de truffe</span>
+                  </p>
+                  <div class="choices__price">40€</div>
+                  <div class="choices__check">
+                    <i class="material-icons">check</i>
+                  </div>
+                </div>
+              </label>
+              <label class="choices__item" for="dish2">
+                <input type="radio" id="dish2" name="dish">
+                <div class="choices__content">
+                  <p class="choices__title">
+                    Langouste rôtie
+                    <span>Et ses légumes de saison</span>
+                  </p>
+                  <div class="choices__price">35€</div>
+                  <div class="choices__check">
+                    <i class="material-icons">check</i>
+                  </div>
+                </div>
+              </label>
+              <label class="choices__item" for="dish3">
+                <input type="radio" id="dish3" name="dish">
+                <div class="choices__content">
+                  <p class="choices__title">
+                    Côte de boeuf Angus
+                    <span>Et sa purée de panais</span>
+                  </p>
+                  <div class="choices__price">44€</div>
+                  <div class="choices__check">
+                    <i class="material-icons">check</i>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="menu__step">
+            <p class="menu__step__title">Desserts</p>
+            <div class="choices">
+              <label class="choices__item" for="dessert1">
+                <input type="radio" id="dessert1" name="dessert">
+                <div class="choices__content">
+                  <p class="choices__title">
+                    Farandole de desserts
+                    <span>Du chef</span>
+                  </p>
+                  <div class="choices__price">18€</div>
+                  <div class="choices__check">
+                    <i class="material-icons">check</i>
+                  </div>
+                </div>
+              </label>
+              <label class="choices__item" for="dessert2">
+                <input type="radio" id="dessert2" name="dessert">
+                <div class="choices__content">
+                  <p class="choices__title">
+                    Crème brulée
+                    <span>Revisitée</span>
+                  </p>
+                  <div class="choices__price">22€</div>
+                  <div class="choices__check">
+                    <i class="material-icons">check</i>
+                  </div>
+                </div>
+              </label>
+              <label class="choices__item" for="dessert3">
+                <input type="radio" id="dessert3" name="dessert">
+                <div class="choices__content">
+                  <p class="choices__title">
+                    Tiramisu
+                    <span>À la noisette</span>
+                  </p>
+                  <div class="choices__price">23€</div>
+                  <div class="choices__check">
+                    <i class="material-icons">check</i>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="order">
+            <a href="#" class="btn-primary">
+              Commander
+            </a>
+          </div>
+        </section>
+        <footer class="footer">
+          <ul>
+            <li>
+              <div class="logo">
+                <img src="images/content/ohmyfood@2x.svg" alt="ohmyfood">
+              </div>
+            </li>
+            <li>
+              <a href="#">
+                <i class="material-icons">restaurant</i>
+                Proposer un restaurant
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="material-icons">groups</i>
+                Devenir partenaire
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Mentions légales
+              </a>
+            </li>
+            <li>
+              <a href="mailto:contact@ohmyfood.com">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </main>
+    </div>
+  <script src="js/app.js"></script></body>
+</html>
