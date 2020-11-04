@@ -254,6 +254,10 @@ body {
 }
 
 .app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
   max-width: 375px;
   margin: 0 auto;
   min-width: 320px;
@@ -263,6 +267,45 @@ body {
           flex-direction: column;
   overflow: hidden;
   scroll-behavior: smooth;
+}
+.app--index {
+  -webkit-animation: 3s linear pageIn;
+          animation: 3s linear pageIn;
+}
+
+.loader {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.loader h1 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-family: "Shrikhand", cursive;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #FF79DA), color-stop(30%, #9356DC), color-stop(70%, #9356DC), color-stop(80%, #FF79DA));
+  background: linear-gradient(to right, #FF79DA 10%, #9356DC 30%, #9356DC 70%, #FF79DA 80%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: textShine 1s linear infinite reverse;
 }
 
 .wrapper {
@@ -337,6 +380,13 @@ body {
           align-items: center;
   position: relative;
 }
+.my-location .toggleMap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 .my-location__btn {
   position: relative;
   border: none;
@@ -360,6 +410,35 @@ body {
   left: -25px;
 }
 
+.toggleMap {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.toggleMap input[type=checkbox] {
+  display: none;
+}
+.toggleMap input[type=checkbox]:checked ~ .map {
+  background-color: #fff;
+  z-index: 10;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.toggleMap .map {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100%;
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  background-size: cover;
+  background: url(../images/design/Paris_Belleville_GoogleMaps.dd87b6.png) 0 0 no-repeat #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 500px;
@@ -368,6 +447,7 @@ body {
   overflow-y: auto;
   background-color: #f6f6f6;
   position: relative;
+  scroll-behavior: smooth;
 }
 .main__header--menu {
   height: 275px;
@@ -404,6 +484,13 @@ h1, h2 {
   background: linear-gradient(176deg, #FF79DA, #9356DC 94%);
   -webkit-box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background: linear-gradient(176deg, #ff93e1, #a16be0 94%);
+  -webkit-box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
 }
 
 .intro {
@@ -655,6 +742,39 @@ h1, h2 {
   margin: 52px 0 47px;
 }
 
+@-webkit-keyframes choicesIn {
+  0% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes choicesIn {
+  0% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
 .choices {
   padding: 0 13px;
 }
@@ -666,6 +786,57 @@ h1, h2 {
   border-radius: 16px;
   font-weight: bold;
   cursor: pointer;
+  -webkit-box-shadow: 0 4px 9px 4px #cfcfcf;
+          box-shadow: 0 4px 9px 4px #cfcfcf;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+  opacity: 0;
+}
+.choices__item.delay-0 {
+  -webkit-animation: 0.5s linear 0s choicesIn forwards;
+          animation: 0.5s linear 0s choicesIn forwards;
+}
+.choices__item.delay-1 {
+  -webkit-animation: 0.5s linear 0.25s choicesIn forwards;
+          animation: 0.5s linear 0.25s choicesIn forwards;
+}
+.choices__item.delay-2 {
+  -webkit-animation: 0.5s linear 0.5s choicesIn forwards;
+          animation: 0.5s linear 0.5s choicesIn forwards;
+}
+.choices__item.delay-3 {
+  -webkit-animation: 0.5s linear 0.75s choicesIn forwards;
+          animation: 0.5s linear 0.75s choicesIn forwards;
+}
+.choices__item.delay-4 {
+  -webkit-animation: 0.5s linear 1s choicesIn forwards;
+          animation: 0.5s linear 1s choicesIn forwards;
+}
+.choices__item.delay-5 {
+  -webkit-animation: 0.5s linear 1.25s choicesIn forwards;
+          animation: 0.5s linear 1.25s choicesIn forwards;
+}
+.choices__item.delay-6 {
+  -webkit-animation: 0.5s linear 1.5s choicesIn forwards;
+          animation: 0.5s linear 1.5s choicesIn forwards;
+}
+.choices__item.delay-7 {
+  -webkit-animation: 0.5s linear 1.75s choicesIn forwards;
+          animation: 0.5s linear 1.75s choicesIn forwards;
+}
+.choices__item.delay-8 {
+  -webkit-animation: 0.5s linear 2s choicesIn forwards;
+          animation: 0.5s linear 2s choicesIn forwards;
+}
+.choices__item.delay-9 {
+  -webkit-animation: 0.5s linear 2.25s choicesIn forwards;
+          animation: 0.5s linear 2.25s choicesIn forwards;
+}
+.choices__item.delay-10 {
+  -webkit-animation: 0.5s linear 2.5s choicesIn forwards;
+          animation: 0.5s linear 2.5s choicesIn forwards;
 }
 .choices__item input {
   display: none;
@@ -783,4 +954,38 @@ h1, h2 {
 .footer .material-icons {
   font-size: 0.875rem;
   margin-right: 9px;
+}
+
+@-webkit-keyframes pageIn {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pageIn {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes textShine {
+  to {
+    background-position: 200%;
+  }
+}
+@keyframes textShine {
+  to {
+    background-position: 200%;
+  }
 }

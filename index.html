@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <title>ohmyfood</title>
   <link rel="icon" href="favicon.ico"><link href="css/app.css" rel="stylesheet"></head>
   <body>
-    <div class="app">
+    <div class="loader">
+      <h1>ohmyfood</h1>
+    </div>
+    <div class="app app--index">
       <header class="header">
         <div class="wrapper">
           <div class="header__top">
@@ -27,6 +31,11 @@
               <i class="material-icons">place</i>
               Paris, Belleville
             </button>
+            <label class="toggleMap" for="toggleMap">
+              <input type="checkbox" id="toggleMap" name="toggleMap">
+              <div class="map">
+              </div>
+            </label>
           </div>
           <div class="intro">
             <h1 class="intro__title">
