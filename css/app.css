@@ -272,6 +272,23 @@ body {
   -webkit-animation: 3s linear pageIn;
           animation: 3s linear pageIn;
 }
+.app h1, .app h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+@media (min-width: 620px) {
+  .app h1, .app h2 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+@media (min-width: 620px) {
+  .app {
+    width: 100%;
+    max-width: 1064px;
+  }
+}
 
 .loader {
   display: none;
@@ -451,10 +468,15 @@ body {
   display: none;
 }
 .toggleMap input[type=checkbox]:checked ~ .map {
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 10;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+@media (min-width: 620px) {
+  .toggleMap input[type=checkbox]:checked ~ .map {
+    opacity: 1;
+  }
 }
 .toggleMap .map {
   position: fixed;
@@ -465,11 +487,102 @@ body {
   height: 100%;
   -webkit-transform: translateX(100vw);
           transform: translateX(100vw);
-  background-size: cover;
-  background-color: #fff;
-  background: url(../images/design/Paris_Belleville_GoogleMaps.dd87b6.png) 0 0 no-repeat #fff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (min-width: 620px) {
+  .toggleMap .map {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 0;
+    opacity: 0;
+  }
+}
+.toggleMap .map .gmap {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  background: url(../images/design/google-map.0967cd.png) center center no-repeat #fff;
+}
+@media (min-width: 620px) {
+  .toggleMap .map .gmap {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 520px;
+            flex: 0 1 520px;
+    height: 60%;
+    max-height: 620px;
+    border-radius: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .toggleMap .map .gmap {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 70%;
+            flex: 0 1 70%;
+    height: 70%;
+  }
+}
+.toggleMap .map .gmap__header {
+  height: 70px;
+  background-color: #fff;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.toggleMap .map .gmap__header .form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  height: 100%;
+  overflow: hidden;
+}
+.toggleMap .map .gmap__header input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 150px;
+          flex: 1 1 150px;
+  border: none;
+  height: 100%;
+  padding: 10px;
+  font-size: 1.125rem;
+}
+.toggleMap .map .gmap__header .postpend {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .main {
@@ -489,12 +602,14 @@ body {
 .main__header--menu .main__header__img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+.main__header--menu .main__header__img img {
   max-width: 120%;
 }
-
-h1, h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
+@media (min-width: 375px) {
+  .main__header--menu .main__header__img img {
+    max-width: 100%;
+  }
 }
 
 .btn-primary {
@@ -613,6 +728,22 @@ h1, h2 {
 .restaurants {
   padding: 51px 20px 47px;
 }
+@media (min-width: 620px) {
+  .restaurants {
+    padding-bottom: 27px;
+  }
+}
+@media (min-width: 620px) {
+  .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
 .restaurants__title {
   margin-bottom: 22px;
 }
@@ -657,6 +788,14 @@ h1, h2 {
   color: #000;
   -webkit-box-shadow: 0 3px 8px 1px #ddd;
           box-shadow: 0 3px 8px 1px #ddd;
+}
+@media (min-width: 620px) {
+  .restau {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 45%;
+            flex: 0 1 45%;
+    margin-bottom: 40px;
+  }
 }
 .restau__header {
   height: 175px;
@@ -882,7 +1021,7 @@ h1, h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 120%;
+  width: calc(100% + 58px);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -912,15 +1051,20 @@ h1, h2 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  font-size: 1.125rem;
+  font-size: 1rem;
   padding: 13px 11px;
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+@media (min-width: 375px) {
+  .choices__title {
+    font-size: 1.125rem;
+  }
+}
 .choices__title span {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: lighter;
   display: block;
   margin-top: 3px;
@@ -928,6 +1072,11 @@ h1, h2 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+@media (min-width: 375px) {
+  .choices__title span {
+    font-size: 1rem;
+  }
 }
 .choices__price {
   -webkit-box-flex: 0;
