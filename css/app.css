@@ -281,7 +281,6 @@ body {
   z-index: 0;
   height: 100%;
   width: 100%;
-  background-color: #f6f6f6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -293,8 +292,11 @@ body {
           align-items: center;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-animation: 3s linear loaderOut;
+          animation: 3s linear loaderOut;
 }
 .loader h1 {
+  padding: 0 5px;
   font-size: 1.875rem;
   font-weight: bold;
   font-family: "Shrikhand", cursive;
@@ -308,6 +310,35 @@ body {
   animation: textShine 1s linear infinite reverse;
 }
 
+@-webkit-keyframes loaderOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes loaderOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
 .wrapper {
   margin: 0 auto;
   width: 100%;
@@ -322,6 +353,7 @@ body {
       -ms-flex: 0 0 63px;
           flex: 0 0 63px;
   position: relative;
+  background-color: #fff;
 }
 .header .link-return {
   position: absolute;
@@ -434,6 +466,7 @@ body {
   -webkit-transform: translateX(100vw);
           transform: translateX(100vw);
   background-size: cover;
+  background-color: #fff;
   background: url(../images/design/Paris_Belleville_GoogleMaps.dd87b6.png) 0 0 no-repeat #fff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -456,6 +489,7 @@ body {
 .main__header--menu .main__header__img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  max-width: 120%;
 }
 
 h1, h2 {
@@ -848,7 +882,7 @@ h1, h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 118%;
+  width: 120%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
