@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
     <title>ohmyfood</title>
   <link rel="icon" href="favicon.ico"><link href="css/app.css" rel="stylesheet"></head>
   <body>
-    <!-- <div class="loader">
+    <div class="loader">
       <h1>ohmyfood</h1>
-    </div> -->
+    </div>
     <div class="app app--index">
       <header class="header">
         <div class="wrapper">
@@ -33,18 +33,18 @@
             </button>
             <label class="toggleMap" for="toggleMap">
               <input type="checkbox" id="toggleMap" name="toggleMap">
-              <div class="map">
-                <div class="gmap">
-                  <div class="gmap__header">
-                    <div class="form">
-                      <input type="text" value="Paris, Belleville">
-                      <div class="postpend">
+              <span class="map">
+                <span class="gmap">
+                  <span class="gmap__header">
+                    <span class="form">
+                      <span class="input" contenteditable="true">Paris, Belleville</span>
+                      <span class="postpend">
                         <i class="material-icons">close</i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </span>
             </label>
           </div>
           <div class="intro">
@@ -83,68 +83,76 @@
         </section>
         <section class="restaurants" id="restaurants">
           <h2 class="restaurants__title">Restaurants</h2>
-          <a href="./menu1.html" class="restau">
-            <div class="restau__header">
-              <img src="images/content/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-              <div class="tag">
-                Nouveau
+          <div class="restau">
+            <a href="./menu1.html" class="restau__link">
+              <div class="restau__header">
+                <img src="images/content/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                <div class="tag">
+                  Nouveau
+                </div>
               </div>
-            </div>
-            <div class="restau__bottom">
-              <div class="restau__title">La palette du goût</div>
-              <div class="restau__city">Ménilmontant</div>
-              <label class="like restau__like" for="checkbox1">
-                <input type="checkbox" id="checkbox1" name="checkbox1">
-                <i class="like__ico like__ico--liked material-icons">favorite</i>
-                <i class="like__ico material-icons">favorite_border</i>
-              </label>
-            </div>
-          </a>
-          <a href="./menu2.html" class="restau">
-            <div class="restau__header">
-              <img src="images/content/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
-              <div class="tag">
-                Nouveau
+              <div class="restau__bottom">
+                <div class="restau__title">La palette du goût</div>
+                <div class="restau__city">Ménilmontant</div>
               </div>
-            </div>
-            <div class="restau__bottom">
-              <div class="restau__title">La note enchantée</div>
-              <div class="restau__city">Charonne</div>
-              <label class="like restau__like" for="checkbox2">
-                <input type="checkbox" id="checkbox2" name="checkbox2" checked>
-                <i class="like__ico like__ico--liked material-icons">favorite</i>
-                <i class="like__ico material-icons">favorite_border</i>
-              </label>
-            </div>
-          </a>
-          <a href="./menu3.html" class="restau">
-            <div class="restau__header">
-              <img src="images/content/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="à la française">
-            </div>
-            <div class="restau__bottom">
-              <div class="restau__title">à la française</div>
-              <div class="restau__city">Cité Rouge</div>
-              <label class="like restau__like" for="checkbox3">
-                <input type="checkbox" id="checkbox3" name="checkbox3">
-                <i class="like__ico like__ico--liked material-icons">favorite</i>
-                <i class="like__ico material-icons">favorite_border</i>
-              </label>
-            </div>
-          </a>
-          <a href="./menu4.html" class="restau">
-            <div class="restau__header">
-              <img src="images/content/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
-            </div>
-            <div class="restau__bottom">
-              <div class="restau__title">Le délice des sens</div>
-              <div class="restau__city">Folie-Méricourt</div>
-              <label class="like restau__like" for="checkbox4">
-                <input type="checkbox" id="checkbox4" name="checkbox4">
-                <i class="like__ico like__ico--liked material-icons">favorite</i>
-                <i class="like__ico material-icons">favorite_border</i>
-              </label>
-            </div>
-          </a>
+            </a>
+            <label class="like restau__like" for="checkbox1">
+              <input type="checkbox" id="checkbox1" name="checkbox1">
+              <i class="like__ico like__ico--liked material-icons">favorite</i>
+              <i class="like__ico material-icons">favorite_border</i>
+            </label>
+          </div>
+          <div class="restau">
+            <a href="./menu2.html" class="restau__link">
+              <div class="restau__header">
+                <img src="images/content/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+                <div class="tag">
+                  Nouveau
+                </div>
+              </div>
+              <div class="restau__bottom">
+                <div class="restau__title">La note enchantée</div>
+                <div class="restau__city">Charonne</div>
+              </div>
+            </a>
+            <label class="like restau__like" for="checkbox2">
+              <input type="checkbox" id="checkbox2" name="checkbox2">
+              <i class="like__ico like__ico--liked material-icons">favorite</i>
+              <i class="like__ico material-icons">favorite_border</i>
+            </label>
+          </div>
+          <div class="restau">
+            <a href="./menu3.html" class="restau__link">
+              <div class="restau__header">
+                <img src="images/content/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="à la française">
+              </div>
+              <div class="restau__bottom">
+                <div class="restau__title">à la française</div>
+                <div class="restau__city">Cité Rouge</div>
+              </div>
+            </a>
+            <label class="like restau__like" for="checkbox3">
+              <input type="checkbox" id="checkbox3" name="checkbox3">
+              <i class="like__ico like__ico--liked material-icons">favorite</i>
+              <i class="like__ico material-icons">favorite_border</i>
+            </label>
+          </div>
+          <div class="restau">
+            <a href="./menu4.html" class="restau__link">
+              <div class="restau__header">
+                <img src="images/content/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+              </div>
+              <div class="restau__bottom">
+                <div class="restau__title">Le délice des sens</div>
+                <div class="restau__city">Folie-Méricourt</div>
+              </div>
+            </a>
+            <label class="like restau__like" for="checkbox4">
+              <input type="checkbox" id="checkbox4" name="checkbox4">
+              <i class="like__ico like__ico--liked material-icons">favorite</i>
+              <i class="like__ico material-icons">favorite_border</i>
+            </label>
+          </div>
         </section>
         <footer class="footer">
           <ul>
@@ -161,7 +169,7 @@
             </li>
             <li>
               <a href="#">
-                <i class="material-icons">groups</i>
+                <span class="mdi mdi-handshake-outline material-icons"></span>
                 Devenir partenaire
               </a>
             </li>

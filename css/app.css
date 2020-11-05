@@ -239,7 +239,6 @@ pre {
 /**
  * Dirty hacks, yes internet explorer, we are looking at you
 */
-/* Demo Page styles */
 /* template Page styles */
 body {
   height: 100%;
@@ -251,6 +250,48 @@ body {
   -webkit-font-smoothing: antialiased;
   background: #fff;
   color: #000;
+}
+
+.loader {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-animation: 3s linear loaderOut;
+          animation: 3s linear loaderOut;
+}
+.loader h1 {
+  padding: 0 5px;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-family: "Shrikhand", cursive;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #FF79DA), color-stop(30%, #9356DC), color-stop(70%, #9356DC), color-stop(80%, #FF79DA));
+  background: linear-gradient(to right, #FF79DA 10%, #9356DC 30%, #9356DC 70%, #FF79DA 80%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: textShine 1s linear infinite reverse;
+}
+@media (min-width: 1024px) {
+  .loader h1 {
+    font-size: 2.8125rem;
+  }
 }
 
 .app {
@@ -290,72 +331,6 @@ body {
   }
 }
 
-.loader {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-animation: 3s linear loaderOut;
-          animation: 3s linear loaderOut;
-}
-.loader h1 {
-  padding: 0 5px;
-  font-size: 1.875rem;
-  font-weight: bold;
-  font-family: "Shrikhand", cursive;
-  -webkit-text-fill-color: transparent;
-  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #FF79DA), color-stop(30%, #9356DC), color-stop(70%, #9356DC), color-stop(80%, #FF79DA));
-  background: linear-gradient(to right, #FF79DA 10%, #9356DC 30%, #9356DC 70%, #FF79DA 80%);
-  -webkit-background-clip: text;
-          background-clip: text;
-  text-fill-color: transparent;
-  background-size: 200% auto;
-  animation: textShine 1s linear infinite reverse;
-}
-
-@-webkit-keyframes loaderOut {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    display: none;
-  }
-}
-
-@keyframes loaderOut {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    display: none;
-  }
-}
 .wrapper {
   margin: 0 auto;
   width: 100%;
@@ -558,7 +533,7 @@ body {
   height: 100%;
   overflow: hidden;
 }
-.toggleMap .map .gmap__header input {
+.toggleMap .map .gmap__header .input {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 150px;
           flex: 1 1 150px;
@@ -583,33 +558,6 @@ body {
           justify-content: center;
   background-color: transparent;
   cursor: pointer;
-}
-
-.main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 500px;
-          flex: 1 1 500px;
-  overflow: hidden;
-  overflow-y: auto;
-  background-color: #f6f6f6;
-  position: relative;
-  scroll-behavior: smooth;
-}
-.main__header--menu {
-  height: 275px;
-  overflow: hidden;
-}
-.main__header--menu .main__header__img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-.main__header--menu .main__header__img img {
-  max-width: 120%;
-}
-@media (min-width: 375px) {
-  .main__header--menu .main__header__img img {
-    max-width: 100%;
-  }
 }
 
 .btn-primary {
@@ -640,6 +588,64 @@ body {
   background: linear-gradient(176deg, #ff93e1, #a16be0 94%);
   -webkit-box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
           box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
+}
+
+.like {
+  position: relative;
+  cursor: pointer;
+  width: 27px;
+  height: 27px;
+  display: block;
+}
+.like input[type=checkbox] {
+  display: none;
+}
+.like input[type=checkbox]:checked ~ .like__ico {
+  opacity: 0;
+}
+.like input[type=checkbox]:checked ~ .like__ico--liked {
+  opacity: 1;
+}
+.like__ico {
+  font-size: 1.6875rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.like__ico--liked {
+  background: linear-gradient(176deg, #FF79DA, #9356DC 94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 500px;
+          flex: 1 1 500px;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: #f6f6f6;
+  position: relative;
+  scroll-behavior: smooth;
+}
+.main__header--menu {
+  height: 275px;
+  overflow: hidden;
+}
+.main__header--menu .main__header__img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.main__header--menu .main__header__img img {
+  max-width: 120%;
+}
+@media (min-width: 375px) {
+  .main__header--menu .main__header__img img {
+    max-width: 100%;
+  }
 }
 
 .intro {
@@ -748,38 +754,8 @@ body {
   margin-bottom: 22px;
 }
 
-.like {
-  position: relative;
-  cursor: pointer;
-  width: 27px;
-  height: 27px;
-  display: block;
-}
-.like input[type=checkbox] {
-  display: none;
-}
-.like input[type=checkbox]:checked ~ .like__ico {
-  opacity: 0;
-}
-.like input[type=checkbox]:checked ~ .like__ico--liked {
-  opacity: 1;
-}
-.like__ico {
-  font-size: 1.6875rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.like__ico--liked {
-  background: linear-gradient(176deg, #FF79DA, #9356DC 94%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
 .restau {
+  position: relative;
   display: block;
   border-radius: 10px;
   overflow: hidden;
@@ -796,6 +772,9 @@ body {
             flex: 0 1 45%;
     margin-bottom: 40px;
   }
+}
+.restau__linnk {
+  display: block;
 }
 .restau__header {
   height: 175px;
@@ -839,6 +818,7 @@ body {
   font-weight: bold;
   font-size: 1.125rem;
   margin: 0 0 4px;
+  color: #000;
 }
 .restau__title::first-letter {
   text-transform: uppercase;
@@ -846,6 +826,7 @@ body {
 .restau__city {
   font-weight: 300;
   letter-spacing: 0.5px;
+  color: #000;
 }
 .restau .like {
   position: absolute;
@@ -855,6 +836,9 @@ body {
   width: 55px;
   height: 100%;
   padding: 19px 5px;
+  top: auto;
+  bottom: 0;
+  height: 76px;
 }
 .restau .like__ico--liked {
   top: 19px;
@@ -1160,6 +1144,34 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+@-webkit-keyframes loaderOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes loaderOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
   }
 }
 @-webkit-keyframes textShine {
