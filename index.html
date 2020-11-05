@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
     <title>ohmyfood</title>
   <link rel="icon" href="favicon.ico"><link href="css/app.css" rel="stylesheet"></head>
@@ -28,7 +27,7 @@
         <header class="main__header">
           <div class="my-location">
             <button type="button" class="my-location__btn">
-              <i class="material-icons">place</i>
+              <span class="mdi mdi-map-marker"></span>
               Paris, Belleville
             </button>
             <label class="toggleMap" for="toggleMap">
@@ -39,7 +38,7 @@
                     <span class="form">
                       <span class="input" contenteditable="true">Paris, Belleville</span>
                       <span class="postpend">
-                        <i class="material-icons">close</i>
+                        <span class="mdi mdi-close"></span>
                       </span>
                     </span>
                   </span>
@@ -65,18 +64,17 @@
           <div class="steps">
             <div class="steps__item">
               <div class="steps__numb">1</div>
-              <!-- <i class="material-icons">phonelink</i> -->
-              <i class="steps__ico material-icons">phone_iphone</i>
+              <span class="mdi mdi-cellphone-iphone steps__ico "></span>
               <p class="steps__text">Choisissez un restaurant</p>
             </div>
             <div class="steps__item">
               <div class="steps__numb">2</div>
-              <i class="steps__ico material-icons">format_list_bulleted</i>
+              <span class="mdi mdi-format-list-bulleted steps__ico "></span>
               <p class="steps__text">Composez votre menu</p>
             </div>
             <div class="steps__item">
               <div class="steps__numb">3</div>
-              <i class="steps__ico material-icons">store</i>
+              <span class="mdi mdi-storefront-outline steps__ico "></span>
               <p class="steps__text">Dégustez au restaurant</p>
             </div>
           </div>
@@ -98,8 +96,8 @@
             </a>
             <label class="like restau__like" for="checkbox1">
               <input type="checkbox" id="checkbox1" name="checkbox1">
-              <i class="like__ico like__ico--liked material-icons">favorite</i>
-              <i class="like__ico material-icons">favorite_border</i>
+              <span class="mdi mdi-heart like__ico like__ico--liked"></span>
+              <span class="mdi mdi-heart-outline like__ico"></span>
             </label>
           </div>
           <div class="restau">
@@ -117,8 +115,8 @@
             </a>
             <label class="like restau__like" for="checkbox2">
               <input type="checkbox" id="checkbox2" name="checkbox2">
-              <i class="like__ico like__ico--liked material-icons">favorite</i>
-              <i class="like__ico material-icons">favorite_border</i>
+              <span class="mdi mdi-heart like__ico like__ico--liked"></span>
+              <span class="mdi mdi-heart-outline like__ico"></span>
             </label>
           </div>
           <div class="restau">
@@ -133,8 +131,8 @@
             </a>
             <label class="like restau__like" for="checkbox3">
               <input type="checkbox" id="checkbox3" name="checkbox3">
-              <i class="like__ico like__ico--liked material-icons">favorite</i>
-              <i class="like__ico material-icons">favorite_border</i>
+              <span class="mdi mdi-heart like__ico like__ico--liked"></span>
+              <span class="mdi mdi-heart-outline like__ico"></span>
             </label>
           </div>
           <div class="restau">
@@ -149,8 +147,8 @@
             </a>
             <label class="like restau__like" for="checkbox4">
               <input type="checkbox" id="checkbox4" name="checkbox4">
-              <i class="like__ico like__ico--liked material-icons">favorite</i>
-              <i class="like__ico material-icons">favorite_border</i>
+              <span class="mdi mdi-heart like__ico like__ico--liked"></span>
+              <span class="mdi mdi-heart-outline like__ico"></span>
             </label>
           </div>
         </section>
@@ -163,13 +161,13 @@
             </li>
             <li>
               <a href="#">
-                <i class="material-icons">restaurant</i>
+                <span class="mdi mdi-silverware-fork-knife"></span>
                 Proposer un restaurant
               </a>
             </li>
             <li>
               <a href="#">
-                <span class="mdi mdi-handshake-outline material-icons"></span>
+                <span class="mdi mdi-handshake-outline"></span>
                 Devenir partenaire
               </a>
             </li>
