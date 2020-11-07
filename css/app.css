@@ -336,6 +336,7 @@ h1, h2 {
   width: 100%;
   max-width: 375px;
   max-width: 1024px;
+  position: relative;
 }
 .header {
   position: relative;
