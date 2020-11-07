@@ -26,162 +26,172 @@
         <!-- <div class="gab"></div> -->
         <header class="main__header">
           <div class="my-location">
-            <button type="button" class="my-location__btn">
-              <span class="mdi mdi-map-marker"></span>
-              Paris, Belleville
-            </button>
-            <label class="toggleMap" for="toggleMap">
-              <input type="checkbox" id="toggleMap" name="toggleMap">
-              <span class="map">
-                <span class="gmap">
-                  <span class="gmap__header">
-                    <span class="form">
-                      <span class="input" contenteditable="true">Paris, Belleville</span>
-                      <span class="postpend">
-                        <span class="mdi mdi-close"></span>
+            <div class="wrapper">
+              <button type="button" class="my-location__btn">
+                <span class="mdi mdi-map-marker"></span>
+                Paris, Belleville
+              </button>
+              <label class="toggleMap" for="toggleMap">
+                <input type="checkbox" id="toggleMap" name="toggleMap">
+                <span class="map">
+                  <span class="gmap">
+                    <span class="gmap__header">
+                      <span class="form">
+                        <span class="input" contenteditable="true">Paris, Belleville</span>
+                        <span class="postpend">
+                          <span class="mdi mdi-close"></span>
+                        </span>
                       </span>
                     </span>
                   </span>
                 </span>
-              </span>
-            </label>
+              </label>
+            </div>
           </div>
           <div class="intro">
-            <h1 class="intro__title">
-              Réservez le menu qui <span>vous convient</span>
-            </h1>
-            <p class="intro__text">
-              Découvrez des restaurants d'exception, <br>
-              séléctionnés par nos soins.
-            </p>
-            <a href="#restaurants" class="btn-primary intro__btn">
-              Explorez nos restaurants
-            </a>
+            <div class="wrapper">
+              <h1 class="intro__title">
+                Réservez le menu qui <span>vous convient</span>
+              </h1>
+              <p class="intro__text">
+                Découvrez des restaurants d'exception, <br>
+                séléctionnés par nos soins.
+              </p>
+              <a href="#restaurants" class="btn-primary intro__btn">
+                Explorez nos restaurants
+              </a>
+            </div>
           </div>
         </header>
         <section class="performance">
-          <h2 class="performance__title">Fonctionnement</h2>
-          <div class="steps">
-            <div class="steps__item">
-              <div class="steps__numb">1</div>
-              <span class="mdi mdi-cellphone-iphone steps__ico "></span>
-              <p class="steps__text">Choisissez un restaurant</p>
-            </div>
-            <div class="steps__item">
-              <div class="steps__numb">2</div>
-              <span class="mdi mdi-format-list-bulleted steps__ico "></span>
-              <p class="steps__text">Composez votre menu</p>
-            </div>
-            <div class="steps__item">
-              <div class="steps__numb">3</div>
-              <span class="mdi mdi-storefront-outline steps__ico "></span>
-              <p class="steps__text">Dégustez au restaurant</p>
+          <div class="wrapper">
+            <h2 class="performance__title">Fonctionnement</h2>
+            <div class="steps">
+              <div class="steps__item">
+                <div class="steps__numb">1</div>
+                <span class="mdi mdi-cellphone-iphone steps__ico "></span>
+                <p class="steps__text">Choisissez un restaurant</p>
+              </div>
+              <div class="steps__item">
+                <div class="steps__numb">2</div>
+                <span class="mdi mdi-format-list-bulleted steps__ico "></span>
+                <p class="steps__text">Composez votre menu</p>
+              </div>
+              <div class="steps__item">
+                <div class="steps__numb">3</div>
+                <span class="mdi mdi-storefront-outline steps__ico "></span>
+                <p class="steps__text">Dégustez au restaurant</p>
+              </div>
             </div>
           </div>
         </section>
         <section class="restaurants" id="restaurants">
-          <h2 class="restaurants__title">Restaurants</h2>
-          <div class="restau">
-            <a href="./menu1.html" class="restau__link">
-              <div class="restau__header">
-                <img src="images/content/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                <div class="tag">
-                  Nouveau
+          <div class="wrapper">
+            <h2 class="restaurants__title">Restaurants</h2>
+            <div class="restau">
+              <a href="./menu1.html" class="restau__link">
+                <div class="restau__header">
+                  <img src="images/content/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                  <div class="tag">
+                    Nouveau
+                  </div>
                 </div>
-              </div>
-              <div class="restau__bottom">
-                <div class="restau__title">La palette du goût</div>
-                <div class="restau__city">Ménilmontant</div>
-              </div>
-            </a>
-            <label class="like restau__like" for="checkbox1">
-              <input type="checkbox" id="checkbox1" name="checkbox1">
-              <span class="mdi mdi-heart like__ico like__ico--liked"></span>
-              <span class="mdi mdi-heart-outline like__ico"></span>
-            </label>
-          </div>
-          <div class="restau">
-            <a href="./menu2.html" class="restau__link">
-              <div class="restau__header">
-                <img src="images/content/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
-                <div class="tag">
-                  Nouveau
+                <div class="restau__bottom">
+                  <div class="restau__title">La palette du goût</div>
+                  <div class="restau__city">Ménilmontant</div>
                 </div>
-              </div>
-              <div class="restau__bottom">
-                <div class="restau__title">La note enchantée</div>
-                <div class="restau__city">Charonne</div>
-              </div>
-            </a>
-            <label class="like restau__like" for="checkbox2">
-              <input type="checkbox" id="checkbox2" name="checkbox2">
-              <span class="mdi mdi-heart like__ico like__ico--liked"></span>
-              <span class="mdi mdi-heart-outline like__ico"></span>
-            </label>
-          </div>
-          <div class="restau">
-            <a href="./menu3.html" class="restau__link">
-              <div class="restau__header">
-                <img src="images/content/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="à la française">
-              </div>
-              <div class="restau__bottom">
-                <div class="restau__title">à la française</div>
-                <div class="restau__city">Cité Rouge</div>
-              </div>
-            </a>
-            <label class="like restau__like" for="checkbox3">
-              <input type="checkbox" id="checkbox3" name="checkbox3">
-              <span class="mdi mdi-heart like__ico like__ico--liked"></span>
-              <span class="mdi mdi-heart-outline like__ico"></span>
-            </label>
-          </div>
-          <div class="restau">
-            <a href="./menu4.html" class="restau__link">
-              <div class="restau__header">
-                <img src="images/content/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
-              </div>
-              <div class="restau__bottom">
-                <div class="restau__title">Le délice des sens</div>
-                <div class="restau__city">Folie-Méricourt</div>
-              </div>
-            </a>
-            <label class="like restau__like" for="checkbox4">
-              <input type="checkbox" id="checkbox4" name="checkbox4">
-              <span class="mdi mdi-heart like__ico like__ico--liked"></span>
-              <span class="mdi mdi-heart-outline like__ico"></span>
-            </label>
+              </a>
+              <label class="like restau__like" for="checkbox1">
+                <input type="checkbox" id="checkbox1" name="checkbox1">
+                <span class="mdi mdi-heart like__ico like__ico--liked"></span>
+                <span class="mdi mdi-heart-outline like__ico"></span>
+              </label>
+            </div>
+            <div class="restau">
+              <a href="./menu2.html" class="restau__link">
+                <div class="restau__header">
+                  <img src="images/content/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+                  <div class="tag">
+                    Nouveau
+                  </div>
+                </div>
+                <div class="restau__bottom">
+                  <div class="restau__title">La note enchantée</div>
+                  <div class="restau__city">Charonne</div>
+                </div>
+              </a>
+              <label class="like restau__like" for="checkbox2">
+                <input type="checkbox" id="checkbox2" name="checkbox2">
+                <span class="mdi mdi-heart like__ico like__ico--liked"></span>
+                <span class="mdi mdi-heart-outline like__ico"></span>
+              </label>
+            </div>
+            <div class="restau">
+              <a href="./menu3.html" class="restau__link">
+                <div class="restau__header">
+                  <img src="images/content/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="à la française">
+                </div>
+                <div class="restau__bottom">
+                  <div class="restau__title">à la française</div>
+                  <div class="restau__city">Cité Rouge</div>
+                </div>
+              </a>
+              <label class="like restau__like" for="checkbox3">
+                <input type="checkbox" id="checkbox3" name="checkbox3">
+                <span class="mdi mdi-heart like__ico like__ico--liked"></span>
+                <span class="mdi mdi-heart-outline like__ico"></span>
+              </label>
+            </div>
+            <div class="restau">
+              <a href="./menu4.html" class="restau__link">
+                <div class="restau__header">
+                  <img src="images/content/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+                </div>
+                <div class="restau__bottom">
+                  <div class="restau__title">Le délice des sens</div>
+                  <div class="restau__city">Folie-Méricourt</div>
+                </div>
+              </a>
+              <label class="like restau__like" for="checkbox4">
+                <input type="checkbox" id="checkbox4" name="checkbox4">
+                <span class="mdi mdi-heart like__ico like__ico--liked"></span>
+                <span class="mdi mdi-heart-outline like__ico"></span>
+              </label>
+            </div>
           </div>
         </section>
         <footer class="footer">
-          <ul>
-            <li>
-              <div class="logo">
-                <img src="images/content/ohmyfood@2x.svg" alt="ohmyfood">
-              </div>
-            </li>
-            <li>
-              <a href="#">
-                <span class="mdi mdi-silverware-fork-knife"></span>
-                Proposer un restaurant
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="mdi mdi-handshake-outline"></span>
-                Devenir partenaire
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Mentions légales
-              </a>
-            </li>
-            <li>
-              <a href="mailto:contact@ohmyfood.com">
-                Contact
-              </a>
-            </li>
-          </ul>
+          <div class="wrapper">
+            <ul>
+              <li>
+                <div class="logo">
+                  <img src="images/content/ohmyfood@2x.svg" alt="ohmyfood">
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="mdi mdi-silverware-fork-knife"></span>
+                  Proposer un restaurant
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="mdi mdi-handshake-outline"></span>
+                  Devenir partenaire
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Mentions légales
+                </a>
+              </li>
+              <li>
+                <a href="mailto:contact@ohmyfood.com">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
         </footer>
       </main>
     </div>

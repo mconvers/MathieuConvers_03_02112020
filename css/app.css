@@ -299,7 +299,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  max-width: 375px;
+  max-width: 100%;
   margin: 0 auto;
   min-width: 320px;
   -webkit-box-orient: vertical;
@@ -316,7 +316,6 @@ body {
 @media (min-width: 620px) {
   .app {
     width: 100%;
-    max-width: 1064px;
   }
 }
 
@@ -335,9 +334,12 @@ h1, h2 {
 .wrapper {
   margin: 0 auto;
   width: 100%;
+  max-width: 375px;
+  max-width: 1024px;
 }
-
 .header {
+  position: relative;
+  z-index: 1;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -347,6 +349,8 @@ h1, h2 {
           flex: 0 0 63px;
   position: relative;
   background-color: #fff;
+  -webkit-box-shadow: 0 0px 3px 2px #cfcfcf;
+          box-shadow: 0 0px 3px 2px #cfcfcf;
 }
 .header .link-return {
   position: absolute;
@@ -379,10 +383,6 @@ h1, h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0 0px 3px 2px #cfcfcf;
-          box-shadow: 0 0px 3px 2px #cfcfcf;
-  position: relative;
-  z-index: 1;
 }
 .header .logo {
   width: 165px;
@@ -395,6 +395,15 @@ h1, h2 {
 .my-location {
   background-color: #eaeaea;
   height: 50px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.my-location .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -664,6 +673,19 @@ h1, h2 {
           align-items: center;
   text-align: center;
 }
+.intro .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
 .intro__title {
   margin-bottom: 13px;
 }
@@ -771,12 +793,7 @@ h1, h2 {
   padding: 51px 20px 47px;
 }
 @media (min-width: 620px) {
-  .restaurants {
-    padding-bottom: 27px;
-  }
-}
-@media (min-width: 620px) {
-  .restaurants {
+  .restaurants .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -784,6 +801,11 @@ h1, h2 {
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+}
+@media (min-width: 620px) {
+  .restaurants {
+    padding-bottom: 27px;
   }
 }
 .restaurants__title {
