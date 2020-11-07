@@ -1038,6 +1038,10 @@ h1, h2 {
 .choices__item input:checked ~ .choices__content {
   width: 100%;
 }
+.choices__item input:checked ~ .choices__content .choices__check .mdi {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
 .choices__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1067,6 +1071,8 @@ h1, h2 {
   background-color: #fff;
   border-radius: 100%;
   padding: 4px 5px;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
 }
 .choices__title {
   -webkit-box-flex: 1;
